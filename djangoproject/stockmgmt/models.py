@@ -3,8 +3,8 @@ from django.db import models
 
 # Create your models here.
 class Stock(models.Model):
-    category = models.CharField(max_length=50, blank=True, null=True)
-    item_name = models.CharField(max_length=50, blank=True, null=True)
+    category = models.CharField(max_length=50, blank=False, null=True)
+    item_name = models.CharField(max_length=50, blank=False, null=True)
     quantity = models.IntegerField(null=True, blank=True, default="0")
     receive_quantity = models.IntegerField(null=True, blank=True, default="0")
     receive_by = models.CharField(max_length=50, null=True, blank=True)
